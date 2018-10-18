@@ -4,6 +4,19 @@ The RideBOS app is a bike ride tracker which will store details of bike rides al
 
 It is a JavaScript-based front-end which communicates with a Rails API.
 
+## Links to repos, front-end, and API:
+### Front-end:
+#### App:
+https://dwbergstrom.github.io/ridebos-client/
+#### Repo:
+https://github.com/DWBergstrom/ridebos-client
+
+### API:
+#### App:
+https://ridebosapi.herokuapp.com/
+#### Repo:
+https://github.com/DWBergstrom/ridebos-rails-api
+
 ## API End Points
 
 | Verb   | URI Pattern            | Controller#Action |
@@ -36,12 +49,6 @@ It is a JavaScript-based front-end which communicates with a Rails API.
 ##### Deployed on:
 + Heroku
 
-## Links to front-end and API:
-Front-end:
-https://dwbergstrom.github.io/ridebos-client/
-
-API:
-https://ridebosapi.herokuapp.com/
 
 ### Wireframes and entity relationship diagram:
 Pre-login:
