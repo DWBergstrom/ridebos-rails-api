@@ -1,9 +1,9 @@
-class RidesController < ApplicationController
+class RidesController < ProtectedController
   before_action :set_ride, only: [:show, :update, :destroy]
 
   # GET /rides
   def index
-    @rides = Ride.all
+    @rides = current_user.rides.all
 
     render json: @rides
   end
@@ -15,7 +15,7 @@ class RidesController < ApplicationController
 
   # POST /rides
   def create
-    @ride = Ride.new(ride_params)
+    @ride = current_user.rides.build(ride_params)
 
     if @ride.save
       render json: @ride, status: :created, location: @ride
@@ -41,7 +41,7 @@ class RidesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ride
-      @ride = Ride.find(params[:id])
+      @ride = current_user.rides.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
