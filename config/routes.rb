@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
   # RESTful routes
+  # rides routes
+  resources :rides, except: %i[new edit]
+  # example routes
   resources :examples, except: %i[new edit]
 
   # Custom routes
